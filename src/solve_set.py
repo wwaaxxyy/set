@@ -1,10 +1,14 @@
 # Programme en ligne de commande qui dit si un ensemble de cartes est un set
+import traceback
 
-toto = True
+def is_set(number):
+    if number is not 3:
+        return False
+    else:
+        return True
 
-
-def is_set():
-    return toto
-
-if is_set() is True:
-    print("c'est bien un set")
+try:
+    print("c'est set? ", is_set())
+except Exception:
+    #traceback.print_stack()
+    print("t'as pas oublié un truc")
